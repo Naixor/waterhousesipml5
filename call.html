@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>温都水城sipml5</title>
+
+    <link type="text/css" rel="stylesheet" href="source/css/call_css.css"/>
+    <link type="text/css" rel="stylesheet" href="source/css/login.css"/>
+
+    <script type="text/javascript" language="javascript" src="source/js/sipml5Handler.js"></script>
+    <script type="text/javascript" language="javascript" src="source/js/call_who.js"></script>
+    <script type="text/javascript" language="javascript" src="source/js/login.js"></script>
+    <script type="text/javascript" language="javascript" src="source/js/get_friendlist.js"></script>
+    <script type="text/javascript" language="javascript" src="source/js/SIPml-api.js"></script>
+    <script type="text/javascript" language="javascript" src="source/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+    <noscript></noscript>
+    <div id="login_Div" class="container">
+        <form id="contactform" class="rounded" method="post" action="">
+            <h3>登录</h3>
+            <div class="field">
+                <label for="name">用户名:</label>
+                <input type="text" class="input" name="name" id="name" />
+                <p class="hint">请输入您的用户名.</p>
+            </div>
+
+            <div class="field">
+                <label for="password">密码:</label>
+                <input type="password" class="input" name="password" id="password" />
+                <p class="hint">请输入您的密码.</p>
+            </div>
+
+            <div class="field">
+                <label for="message">验证码:</label>
+                <input type="text" style="width:180px;" class="input" name="message" id="checkInput"></input>
+            <div style="margin-top:-30px; margin-left:320px;" id="main">
+                <div id="num1" class="verifiedCode"> <font id="val0"></font>
+                </div>
+                <div id="num2" class="verifiedCode"> <font id="val1"></font>
+                </div>
+                <div id="num3" class="verifiedCode">
+                    <font id="val2"></font>
+                </div>
+                <div id="num4" class="verifiedCode">
+                    <font id="val3"></font>
+                </div>
+            </div>
+            <p class="hint">点击刷新.</p>
+        </div>
+
+        <input id="register" type="button" name="submit"  class="button" value="登录" />
+    </form>
+</div>
+
+<div id="call_Div">
+    <a id="button" class="button_call">call</a>
+    <ul id="ul1">
+    	
+    </ul>
+    <div id="prev" class="prev" href=""></div>
+    <div id="next" class="next" href=""></div>
+</div>
+
+<div id="logout_Div">
+	<input type="button" class="btn-danger" id="btnUnRegister" value="注销" onclick='logout();'/>
+</div>
+
+<div id="newCall">
+	<a id="accept_button" class="button_call"><img id="acc_button" src="source/images/acc.png"/></a>
+	<a id="reject_button" class="button_reject"><img id="rej_button" src="source/images/rej.png"></a>
+</div>
+
+	<div id="backgroud_Div">
+
+	</div>
+	<div id="videoStream">
+    	<div id="hangup_cross">
+        	<div class="cross1"></div>
+            <div class="cross2"></div>
+        </div>
+		<video id="video-local" autoplay="autoplay"></video>
+		<video id="video-remote" autoplay="autoplay"></video>
+	</div>
+    
+</body>
+</html>
