@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Waterhousesipml5 : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Waterhousesipml5</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Naixor/waterhousesipml5">View on GitHub</a>
+
+          <h1 id="project_title">Waterhousesipml5</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Naixor/waterhousesipml5/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Naixor/waterhousesipml5/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Ewebrtcwebrtc2sip%E5%92%8Copenimscore%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E9%9F%B3%E8%A7%86%E9%A2%91%E8%81%8A%E5%A4%A9%E7%A8%8B%E5%BA%8F" class="anchor" href="#%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8Ewebrtcwebrtc2sip%E5%92%8Copenimscore%E7%9A%84%E4%B8%80%E4%B8%AA%E7%BD%91%E9%A1%B5%E9%9F%B3%E8%A7%86%E9%A2%91%E8%81%8A%E5%A4%A9%E7%A8%8B%E5%BA%8F"><span class="octicon octicon-link"></span></a>这是一个基于webrtc、webrtc2sip和openimscore的一个网页音视频聊天程序</h3>
+
+<p>PC端以及手机端任何基于OpenIMS的客户端都可以与其建立音视频会话（如doubango、sipdroid、idoubs等），已经过实际测试，只不过你需要自己搭建一个sip服务器还有一个webrtc2sip网关。</p>
+
+<h3>
+<a name="%E4%BF%AE%E6%94%B9%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE" class="anchor" href="#%E4%BF%AE%E6%94%B9%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE"><span class="octicon octicon-link"></span></a>修改相关配置</h3>
+
+<p>源码中的这个函数要根据实际情况修改成适合的值，以下是自己测试时的配置信息</p>
+
+<p>function loginInitialize() {</p>
+
+<pre><code>realm = "bupt315.sse";
+impi = "web-" + $("#name").val() + "@" + realm;
+impu = "sip:" + impi;
+password = $("#password").val();
+display_name = "web-" + $("#name").val();
+
+websocket_proxy_url = "ws://192.168.16.125:4062" ;
+outbound_proxy_url = "udp://192.168.16.173:4060";
+
+textPhoneNumber = "web-nihao";
+SIPml.init(readyCallback, errorCallback);
+}
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Waterhousesipml5 maintained by <a href="https://github.com/Naixor">Naixor</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
